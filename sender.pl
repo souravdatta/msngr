@@ -13,9 +13,9 @@ my $message = <STDIN>;
 chomp $message;
 
 my $client = IO::Socket::INET->new(
-	PeerHost => $ip,
-	PeerPort => 8000,
-	Type => SOCK_STREAM
+    PeerHost => $ip,
+    PeerPort => 8000,
+    Type => SOCK_STREAM
 ) or die "Could not connect to remote computer\n";
 
 print $client "put: $message\n\r";
